@@ -2,15 +2,15 @@ package cn.enilu.guns.bean.entity.system;
 
 import cn.enilu.guns.bean.entity.BaseEntity;
 import lombok.Data;
+import org.hibernate.annotations.Table;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 import javax.persistence.Transient;
 
 @Data
-@Entity
-@Table(name="t_sys_file_info")
+@Entity(name="t_sys_file_info")
+@Table(appliesTo = "t_sys_file_info",comment = "文件")
 public class FileInfo extends BaseEntity {
     @Column
     private String originalFileName;
